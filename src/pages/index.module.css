@@ -4,7 +4,11 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, #6d025b, #15162c);
+  /* background-image: linear-gradient(to bottom, #e673d2, #f5e1f2); */
+  background-size: fill;
+  background-repeat: no-repeat;
+  /* background-color: #F79AC7; */
+  background-image: url("/images/unicornbg3.webp");
 }
 
 .container {

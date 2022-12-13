@@ -15,12 +15,12 @@ const Card = ({
     <ReactCardFlip
       isFlipped={flipped || solved}
       flipDirection="horizontal"
-      flipSpeedBackToFront={1}
-      flipSpeedFrontToBack={1}
+      flipSpeedBackToFront={0.7}
+      flipSpeedFrontToBack={0.7}
     >
       <ImageBox
         id={id}
-        type={"back.png"}
+        type={"backpink2.jpeg"}
         disabled={disabled}
         handleClick={handleClick}
       />

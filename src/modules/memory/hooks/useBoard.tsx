@@ -25,7 +25,7 @@ const useBoard = () => {
         setSolved([...solved, flipped[0]!, id]); // set the solved cards
         resetCards(); // reset the cards
       } else {
-        setTimeout(resetCards, 2000); // set a timeout to reset the cards
+        setTimeout(resetCards, 1400); // set a timeout to reset the cards
       }
     }
   };

@@ -18,8 +18,8 @@ function ImageBox({ disabled, handleClick, id, type }: ImageBoxProps) {
         w={[75, 100, 150, 200]}
         cursor="pointer"
         backgroundSize="contain"
-        borderWidth={5}
-        borderRadius={15}
+        borderWidth={2}
+        borderRadius={20}
         borderStyle="solid"
         backgroundRepeat={"no-repeat"}
         backgroundPosition="center"
