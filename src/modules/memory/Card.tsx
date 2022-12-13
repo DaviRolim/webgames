@@ -20,7 +20,7 @@ const Card = ({
     >
       <ImageBox
         id={id}
-        type={"back"}
+        type={"back.png"}
         disabled={disabled}
         handleClick={handleClick}
       />

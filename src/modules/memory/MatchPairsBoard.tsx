@@ -29,7 +29,6 @@ function MatchPairsBoard() {
   }, [solved]);
 
    const handlePlayAgain = () => {
-    console.log("handlePLayAgain")
     handleResetGame();
     setGameFinished(false);
   };

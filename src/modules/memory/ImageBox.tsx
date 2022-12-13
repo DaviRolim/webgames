@@ -23,7 +23,7 @@ function ImageBox({ disabled, handleClick, id, type }: ImageBoxProps) {
         borderStyle="solid"
         backgroundRepeat={"no-repeat"}
         backgroundPosition="center"
-        backgroundImage={`url(/images/${type}.png)`}
+        backgroundImage={`url(/images/${type})`}
         onClick={() => (disabled ? null : onClick(id))}
       />
     </>

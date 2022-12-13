@@ -56,12 +56,12 @@ const useBoard = () => {
     // TODO Make this dynamic
     // create an array of image names based on the ../../public/images folder
     const imageNames: string[] = [
-      "av-amarela",
-      "av-azul",
-      "av-rosa",
-      "av-vermelha",
-      "ben-diamond-head",
-      "ben-four-arms",
+      "av-amarela.png",
+      "av-azul.png",
+      "av-rosa.png",
+      "av-vermelha.png",
+      "lari.jpg",
+      "davi.jpg",
     ];
 
     for (let i = 0; i < maxValue; i++) {
