@@ -6,7 +6,8 @@ import React, { useEffect, useRef, useState } from "react";
 function MatchPairsBoard() {
   const winnigSoundEffect = useRef<HTMLAudioElement>(null);
   const matchedPairSoundEffect = useRef<HTMLAudioElement>(null);
-  const { cards, flipped, solved, disabled, handleClick } = useBoard();
+  const { cards, flipped, solved, disabled, handleClick, handleResetGame } =
+    useBoard();
   const [gameFinished, setGameFinished] = useState(false);
   useEffect(() => {
     if (solved.length === 12) {
@@ -20,6 +21,11 @@ function MatchPairsBoard() {
     }
   }, [solved]);
 
+   const handlePlayAgain = () => {
+    console.log("handlePLayAgain")
+    handleResetGame();
+    setGameFinished(false);
+  };
   if (gameFinished) {
     return (
       <Box
@@ -29,7 +35,9 @@ function MatchPairsBoard() {
         width="100%"
         py={12}
       >
-        <Button onClick={() => setGameFinished(false)} colorScheme="yellow">Jogar novamente</Button>
+        <Button onClick={handlePlayAgain} colorScheme="yellow">
+          Jogar novamente
+        </Button>
       </Box>
     );
   }

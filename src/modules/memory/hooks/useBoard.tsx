@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { CardType } from "../types";
 
 const useBoard = () => {
@@ -9,12 +9,7 @@ const useBoard = () => {
 
   useEffect(() => {
     setCards(createCards()); // create cards when the component mounts
-    // preloadImages(); // preload the images
   }, []);
-
-  //   useEffect(() => {
-  //     preloadImages(); // preload the images
-  //   }, cards);
 
   const handleClick = (id: string) => {
     setDisabled(true); // disable the click event
@@ -123,12 +118,20 @@ const useBoard = () => {
     setCards(resetedCards);
     setDisabled(false);
   };
+  const resetGame = () => {
+    console.log("RESET GAME")
+    setCards(createCards());
+    setFlipped([]);
+    setSolved([]);
+  };
+
   return {
     cards,
     flipped,
     solved,
     disabled,
     handleClick,
+    handleResetGame: resetGame,
   };
 };
 
