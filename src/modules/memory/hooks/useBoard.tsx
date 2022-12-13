@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { CardType } from "../types";
 
-const useCards = () => {
+const useBoard = () => {
   const [cards, setCards] = useState<CardType[]>([]); // empty array to store the cards
   const [flipped, setFlipped] = useState<string[]>([]); // array to store the flipped cards
   const [solved, setSolved] = useState<string[]>([]); // array to store the solved cards
@@ -123,7 +123,13 @@ const useCards = () => {
     setCards(resetedCards);
     setDisabled(false);
   };
-  return { cards, flipped, solved, disabled, handleClick };
+  return {
+    cards,
+    flipped,
+    solved,
+    disabled,
+    handleClick,
+  };
 };
 
-export default useCards;
+export default useBoard;

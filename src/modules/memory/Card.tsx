@@ -1,4 +1,3 @@
-import { Box, Image } from "@chakra-ui/react";
 // import Image from "next/image";
 import ReactCardFlip from "react-card-flip";
 import ImageBox from "./ImageBox";
@@ -10,9 +9,8 @@ const Card = ({
   solved,
   disabled,
   handleClick,
+  soundEffect,
 }: CardProps) => {
-  if (flipped) {
-  }
   return (
     <ReactCardFlip
       isFlipped={flipped || solved}
@@ -44,6 +42,7 @@ type CardProps = {
   solved: boolean;
   disabled: boolean;
   handleClick: (id: string) => void;
+  soundEffect?: HTMLAudioElement;
 };
 
 export default Card;
